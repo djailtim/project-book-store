@@ -1,19 +1,14 @@
-package com.d3lt4.projectbookstore.models;
+package com.d3lt4.projectbookstore.dto.responses;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "tb_books")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter @ToString
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+public class BookResponse {
     private String id;
     private String title;
     private String overview;
@@ -22,4 +17,5 @@ public class Book {
     private Integer numberPages;
     private String isbn;
     private LocalDate publisher;
+
 }
