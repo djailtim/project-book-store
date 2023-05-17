@@ -2,7 +2,6 @@ package com.d3lt4.projectbookstore.unitTesters;
 
 import com.d3lt4.projectbookstore.dto.requests.BookRequest;
 import com.d3lt4.projectbookstore.dto.responses.BookResponse;
-import com.d3lt4.projectbookstore.models.Book;
 import com.d3lt4.projectbookstore.repositories.BookRepository;
 import com.d3lt4.projectbookstore.services.BookService;
 import org.junit.jupiter.api.DisplayName;
