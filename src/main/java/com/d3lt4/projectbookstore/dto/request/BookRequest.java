@@ -1,15 +1,16 @@
-package com.d3lt4.projectbookstore.dto.responses;
+package com.d3lt4.projectbookstore.dto.request;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter @ToString
-public class BookResponse {
-    private String id;
+public class BookRequest {
     private String title;
     private String overview;
     private String summary;
@@ -17,5 +18,4 @@ public class BookResponse {
     private Integer numberPages;
     private String isbn;
     private LocalDate publisher;
-
 }

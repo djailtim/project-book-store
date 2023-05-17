@@ -1,7 +1,8 @@
 package com.d3lt4.projectbookstore.controllers;
 
-import com.d3lt4.projectbookstore.dto.requests.BookRequest;
-import com.d3lt4.projectbookstore.dto.responses.BookResponse;
+import com.d3lt4.projectbookstore.dto.request.BookRequest;
+import com.d3lt4.projectbookstore.dto.response.BookResponse;
+import com.d3lt4.projectbookstore.models.Book;
 import com.d3lt4.projectbookstore.services.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,8 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<BookResponse> addBook(@RequestBody BookRequest bookRequest) {
-        BookResponse bookResponse = bookService.addBook(bookRequest);
-        return new ResponseEntity<>(bookResponse, HttpStatus.CREATED);
+    public ResponseEntity<Book> addBook(@RequestBody Book book) {
+        Book bookSaved = bookService.addBook(book);
+        return new ResponseEntity<>(bookSaved, HttpStatus.CREATED);
     }
 }
